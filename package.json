@@ -4,7 +4,8 @@
   "version": "0.0.1",
   "private": true,
   "dependencies": {
-    "express": "4.17.1"
+    "express": "4.17.1",
+    "react-scripts": "^4.0.3"
   },
   "devDependencies": {
     "mocha": "9.1.1",
@@ -12,6 +13,6 @@
   },
   "scripts": {
     "start": "node index.js",
-    "test": "./node_modules/.bin/mocha ./test/test.js"
+     "test": "react-scripts test --env=jsdom"
   }
 }
