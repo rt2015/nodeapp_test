@@ -25,7 +25,7 @@ pipeline {
     stage('Test') { 
             steps {
               
-                sh 'echo "burda test yap --> npm test"' 
+                sh 'npm test' 
             }
         }
      stage('run image') {
