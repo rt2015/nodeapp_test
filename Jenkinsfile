@@ -22,6 +22,11 @@ pipeline {
         }
       }
     }
+    stage('Test') { 
+            steps {
+                sh './jenkins/scripts/test.sh' 
+            }
+        }
      stage('run image') {
       steps{
           sh 'docker run -d -p 3000:3000 rtopuz/nodeapptest'
