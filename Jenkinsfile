@@ -42,7 +42,8 @@ pipeline {
 
      stage('kill running image') {
       steps{
-          sh ' kill $(head -c 12  .pidfile) '
+          sh 'docker ps'
+          sh ' docker stop $(head -c 12  .pidfile) '
       }
     }
     
