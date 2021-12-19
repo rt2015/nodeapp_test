@@ -8,7 +8,7 @@ app.get('/', function (req, res) {
     
   res.statusCode = 200;
   res.setHeader('Content-Type', 'text/plain');
-  res.write("------" HELLO WORLD RTOPUZ ---------\n");
+  res.write("------ HELLO WORLD RTOPUZ ---------\n");
 
 headers = JSON.stringify(req.headers)
 
