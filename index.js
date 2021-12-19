@@ -15,10 +15,10 @@ message = "------ HELLO WORLD RTOPUZ ---------\n" ;
  
 headers = JSON.stringify(req.headers)
 
-meesage =   message + "------hostname :" + hostname  + "\n";
-     meesage =   message +   "-" + headers;  
+message =   message + "------hostname :" + hostname  + "\n";
+     message =   message +   "-" + headers;  
 
-     res.send('{ "response": ${message}  }');
+     res.send(message);
     
    console.log("hostname" ,hostname);
     
