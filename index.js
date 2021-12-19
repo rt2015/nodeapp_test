@@ -1,8 +1,12 @@
 var express = require('express');
 var app = express();
+const os = require('os');
+var hostname = os.hostname() ; 
 
 app.get('/', function (req, res) {
-    res.send('{ "response": "Hello From rtopuz38" }');
+    res.send('{ "response": "Hello From rtopuz38----hostname:" + hostname }');
+    console.log("hostname" ,hostname);
+    
 });
 
 app.get('/will', function (req, res) {
