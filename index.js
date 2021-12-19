@@ -3,23 +3,28 @@ var app = express();
 const os = require('os');
 var hostname = os.hostname() ; 
 
+var message = "";
+
+          
+
 app.get('/', function (req, res) {
     
     
-  res.statusCode = 200;
-  res.setHeader('Content-Type', 'text/plain');
-  res.write("------ HELLO WORLD RTOPUZ ---------\n");
-
+message = "------ HELLO WORLD RTOPUZ ---------\n" ;
+    
+ 
 headers = JSON.stringify(req.headers)
 
   for (var k in env) {
     res.write(k + ": " + env[k] + "\n");
   }
-  res.write(headers );
-    res.write("------hostname :" + hostname );
-  res.end();
+meesage =   message + "------hostname :" + hostname  + "\n";
+     meesage =   message +   "-" + headers;  
 
+     res.send('{ "response": ${message}  }');
+    
    console.log("hostname" ,hostname);
+    
     
 });
 
