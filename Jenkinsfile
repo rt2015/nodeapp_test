@@ -31,9 +31,11 @@ pipeline {
         }
      stage('run image') {
       steps{
+          sh' set -x'
           sh 'docker run -d -p 3000:3000 rtopuz/nodeapptest & sleep 10 '
           sh ' echo $! > .pidfile '
           sh ' echo $(cat .pidfile)'
+          sh 'set +x'
           input message: 'Finished using the web site? (Click "Proceed" to continue)' 
       }
     }
