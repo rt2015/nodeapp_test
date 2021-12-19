@@ -24,9 +24,9 @@ pipeline {
     }
     stage('Test') { 
             steps {
-              
+              sh 'pwd'
               sh 'npm install'              
-                sh 'npm test --detectOpenHandles' 
+              sh 'npm test --detectOpenHandles' 
             }
         }
      stage('run image') {
@@ -42,7 +42,7 @@ pipeline {
 
      stage('kill running image') {
       steps{
-          sh ' kill $(cat .pidfile) '
+          sh ' kill $(head -c 12  .pidfile) '
       }
     }
     
