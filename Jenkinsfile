@@ -26,7 +26,7 @@ pipeline {
             steps {
               
               sh 'npm install'              
-                sh 'npm test' 
+                sh 'npm test --detectOpenHandles' 
             }
         }
      stage('run image') {
