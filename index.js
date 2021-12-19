@@ -4,7 +4,7 @@ const os = require('os');
 var hostname = os.hostname() ; 
 
 app.get('/', function (req, res) {
-    res.send('{ "response": "Hello From rtopuz38----hostname:" + hostname }');
+    res.send('{ "response": "Hello From rtopuz38----hostname:" + os.hostname() + " request.host.name :" + req.headers.host }');
     console.log("hostname" ,hostname);
     
 });
