@@ -15,9 +15,6 @@ message = "------ HELLO WORLD RTOPUZ ---------\n" ;
  
 headers = JSON.stringify(req.headers)
 
-  for (var k in env) {
-    res.write(k + ": " + env[k] + "\n");
-  }
 meesage =   message + "------hostname :" + hostname  + "\n";
      meesage =   message +   "-" + headers;  
 
